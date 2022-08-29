@@ -1,0 +1,76 @@
+.container {
+    margin: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container__title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container__content-guess {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container__content-guess-guess-count{
+    margin: auto;
+    padding: 2em;
+    font-size: 1.5rem;
+}
+
+.container__content-guess-letters{
+    font-size: 45px;
+    display: flex;
+    flex-direction: row;
+    color: #ec7001;
+}
+
+.container__content-guess-letters-letter {
+    padding: 30px 20px;
+    margin-left: 50px;
+    border: 2px solid #204ac8;
+}
+
+.container__content-form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container__content-form-wrong-guess{
+    margin: auto;
+    padding-block: 2em;
+    font-size: 1.3rem;
+}
+
+.container__content-form-wrong-guess-span{
+    font-weight: bolder;
+    color: #ff0000;
+}
+
+.container__content-form-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.container__content-input{
+    font-size: 1.2rem;
+}
+
+.container__content-button {
+    font-size: 1.2rem;
+    margin-left: 15px;
+    border: none;
+    border-radius: 8%;
+}
+
+.container__content-button:hover {
+    color: #feff00;
+    background-color: #204ac8;
+}

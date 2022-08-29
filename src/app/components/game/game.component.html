@@ -1,0 +1,61 @@
+<div class="container">
+    <span class="container__title">Adivinhe a palavra secreta!</span>
+
+    <div class="container__content-guess-guess-count">
+      <strong>{{ guessCount }}</strong> 
+      chutes disponíveis
+    </div>
+    
+    <div class="container__content-guess">
+      <div *ngFor="let letter of wordArray">
+        <guess-card [letter]="letter"></guess-card>
+    </div>
+      <!-- <div class="container__content-guess-letters">
+        <div
+          class="container__content-guess-letters-letter"
+          *ngFor="let letter of wordArray"
+        >
+          {{ letter }}
+        </div>
+      </div> -->
+    </div>
+
+    <div class="container__content-form-wrong-guess">
+      Erros:
+      <span class="container__content-form-wrong-guess-span" *ngFor="let letter of wrongGuesses"
+        >{{ letter }}
+        <span
+          *ngIf="wrongGuesses.lastIndexOf(letter) + 1 != wrongGuesses.length"
+        >
+          -
+        </span>
+      </span>
+    </div>
+    
+    <div class="container__content-form">
+      <form
+        class="container__content-form-group"
+        [formGroup]="formGroup"
+        (submit)="submit()"
+      >
+        <div>
+
+          <input class="container__content-input"
+            type="text"
+            formControlName="guess"
+            maxlength="1"
+            placeholder="Digite uma letra"
+          />
+        </div>
+        <button class="container__content-button"
+          [disabled]="
+            !formGroup.get('guess')?.value ||
+            guessCount === 0 ||
+            !this.wordArray.includes('*')
+          "
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+</div>

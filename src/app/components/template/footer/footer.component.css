@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  background-color: #706a65;
+}
+
+.footer--span {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.footer--icon {
+  color: #e35d6b;
+  vertical-align: middle;
+}
